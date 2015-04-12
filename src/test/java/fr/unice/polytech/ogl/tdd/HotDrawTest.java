@@ -1,6 +1,11 @@
 package fr.unice.polytech.ogl.tdd;
 
 
+import fr.unice.polytech.ogl.tdd.operations.Scaling;
+import fr.unice.polytech.ogl.tdd.operations.Translation;
+import fr.unice.polytech.ogl.tdd.widgets.Circle;
+import fr.unice.polytech.ogl.tdd.widgets.Group;
+import fr.unice.polytech.ogl.tdd.widgets.Rectangle;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

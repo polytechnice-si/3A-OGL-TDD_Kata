@@ -1,5 +1,8 @@
-package fr.unice.polytech.ogl.tdd;
+package fr.unice.polytech.ogl.tdd.operations;
 
+
+import fr.unice.polytech.ogl.tdd.widgets.Circle;
+import fr.unice.polytech.ogl.tdd.widgets.Rectangle;
 
 public class Scaling extends Operation {
 

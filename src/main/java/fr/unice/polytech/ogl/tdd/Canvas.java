@@ -1,5 +1,9 @@
 package fr.unice.polytech.ogl.tdd;
 
+import fr.unice.polytech.ogl.tdd.operations.Operation;
+import fr.unice.polytech.ogl.tdd.widgets.Group;
+import fr.unice.polytech.ogl.tdd.widgets.Widget;
+
 public class Canvas {
 
 	private Group group = new Group();
