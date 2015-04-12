@@ -29,4 +29,15 @@ public class HotDrawTest {
 		assertEquals(3, emptyCanvas.getNumberOfElements());
 	}
 
+	@Test
+	public void translatingCircle() {
+		Circle c = new Circle();
+		int oldX = c.getX();
+		int oldY = c.getY();
+
+		c.translate(2, 3);
+		assertEquals(oldX + 2, c.getX());
+		assertEquals(oldY + 3, c.getY());
+	}
+
 }
