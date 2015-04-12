@@ -28,4 +28,7 @@ public class Circle implements Widget {
 	public void scale(int factor) {
 		this.r = r * factor;
 	}
+
+	@Override
+	public void apply(Operation o) { o.processCircle(this); }
 }
