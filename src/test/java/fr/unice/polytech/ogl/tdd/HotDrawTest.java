@@ -15,11 +15,11 @@ public class HotDrawTest {
 	@Test
 	public void testCanvas() {
 		Canvas c = new Canvas();
-		c.add(new Object());
+		c.add(new Circle());
 		assertEquals(1, c.getNumberOfElements());
 
-		c.add(new Object());
-		c.add(new Object());
+		c.add(new Circle());
+		c.add(new Rectangle());
 		assertEquals(3, c.getNumberOfElements());
 	}
 
