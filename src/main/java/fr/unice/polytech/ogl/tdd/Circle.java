@@ -3,13 +3,21 @@ package fr.unice.polytech.ogl.tdd;
 
 public class Circle {
 
-	public Circle() {}
+	private int x, y;
 
-	public Circle(int x, int y, int r) {}
+	public Circle() { this(0, 0, 1); }
 
-	public int getX() { return 0; }
-	public int getY() { return 0; }
+	public Circle(int x, int y, int r) {
+		this.x = x;
+		this.y = y;
+	}
 
-	public void translate(int deltaX, int deltaY) { }
+	public int getX() { return x; }
+	public int getY() { return y; }
+
+	public void translate(int deltaX, int deltaY) {
+		this.x = x + deltaX;
+		this.y = y + deltaY;
+	}
 
 }
