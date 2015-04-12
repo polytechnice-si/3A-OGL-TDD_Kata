@@ -12,4 +12,15 @@ public class HotDrawTest {
 		assertEquals(0, c.getNumberOfElements());
 	}
 
+	@Test
+	public void testCanvas() {
+		Canvas c = new Canvas();
+		c.add(new Object());
+		assertEquals(1, c.getNumberOfElements());
+
+		c.add(new Object());
+		c.add(new Object());
+		assertEquals(3, c.getNumberOfElements());
+	}
+
 }
