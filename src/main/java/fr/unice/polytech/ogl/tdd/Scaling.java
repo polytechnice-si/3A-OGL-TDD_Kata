@@ -11,12 +11,14 @@ public class Scaling implements Operation {
 
 	@Override
 	public void processCircle(Circle c) {
-
-
+		c.setRadius(c.radius() * factor);
 	}
 
 	@Override
 	public void processRectangle(Rectangle r) {
-
+		r.setX1(r.getX1() * factor);
+		r.setX2(r.getX2() * factor);
+		r.setY1(r.getY1() * factor);
+		r.setY2(r.getY2() * factor);
 	}
 }

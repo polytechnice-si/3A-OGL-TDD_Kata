@@ -17,6 +17,7 @@ public class Circle implements Widget {
 	public int getY() { return y; }
 
 	public int radius() { return r; }
+	public void setRadius(int radius) { this.r = radius; }
 
 	@Override
 	public void translate(int deltaX, int deltaY) {
