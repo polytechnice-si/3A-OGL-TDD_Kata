@@ -6,15 +6,17 @@ import static org.junit.Assert.*;
 
 public class HotDrawTest {
 
+	private Canvas c;
+
 	@Test
 	public void testEmptyCanvas() {
-		Canvas c = new Canvas();
+		c = new Canvas();
 		assertEquals(0, c.getNumberOfElements());
 	}
 
 	@Test
 	public void testCanvas() {
-		Canvas c = new Canvas();
+		c = new Canvas();
 		c.add(new Circle(10, 20, 5));    // Circle located at (10,20), with radius 5.
 		assertEquals(1, c.getNumberOfElements());
 
