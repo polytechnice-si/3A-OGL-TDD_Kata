@@ -23,11 +23,5 @@ public class Circle implements Widget {
 	public void setRadius(int radius) { this.r = radius; }
 
 	@Override
-	public void translate(int deltaX, int deltaY) {
-		this.x = x + deltaX;
-		this.y = y + deltaY;
-	}
-
-	@Override
 	public void apply(Operation o) { o.processCircle(this); }
 }

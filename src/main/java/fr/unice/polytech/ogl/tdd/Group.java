@@ -12,8 +12,9 @@ public class Group {
 	public int getNumberOfElements() { return elements.size(); }
 
 	public void translate(int deltaX, int deltaY) {
+		Operation o = new Translation(deltaX, deltaY);
 		for(Widget w: elements) {
-			w.translate(deltaX, deltaY);
+			w.apply(o);
 		}
 	}
 
