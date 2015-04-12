@@ -16,4 +16,6 @@ public class Canvas {
 		elements.add(o);
 	}
 
+	public void translate(int deltaX, int deltaY) { }
+
 }
