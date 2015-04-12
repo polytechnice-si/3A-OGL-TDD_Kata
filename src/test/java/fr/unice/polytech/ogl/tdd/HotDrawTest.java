@@ -43,7 +43,9 @@ public class HotDrawTest {
 		int oldX = aCircle.getX();
 		int oldY = aCircle.getY();
 
-		aCircle.translate(2, 3);
+		Operation t = new Translation(2, 3);
+		aCircle.apply(t);
+
 		assertEquals(oldX + 2, aCircle.getX());
 		assertEquals(oldY + 3, aCircle.getY());
 	}
@@ -55,7 +57,9 @@ public class HotDrawTest {
 		int oldX2 = aRectangle.getX2();
 		int oldY2 = aRectangle.getY2();
 
-		aRectangle.translate(2, 3);
+		Operation t = new Translation(2, 3);
+		aRectangle.apply(t);
+
 		assertEquals(oldX1 + 2, aRectangle.getX1());
 		assertEquals(oldY1 + 3, aRectangle.getY1());
 		assertEquals(oldX2 + 2, aRectangle.getX2());
