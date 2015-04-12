@@ -17,4 +17,10 @@ public class Group {
 		}
 	}
 
+	public void scale(int factor) {
+		for(Widget w: elements) {
+			w.scale(factor);
+		}
+	}
+
 }
