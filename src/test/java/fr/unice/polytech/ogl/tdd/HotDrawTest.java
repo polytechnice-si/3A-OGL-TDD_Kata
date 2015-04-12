@@ -40,4 +40,19 @@ public class HotDrawTest {
 		assertEquals(oldY + 3, c.getY());
 	}
 
+	@Test
+	public void translatingRectangle() {
+		Rectangle r = new Rectangle(5, 6, 10, 8);
+		int oldX1 = r.getX1();
+		int oldY1 = r.getY1();
+		int oldX2 = r.getX2();
+		int oldY2 = r.getY2();
+
+		r.translate(2, 3);
+		assertEquals(oldX1 + 2, r.getX1());
+		assertEquals(oldY1 + 3, r.getY1());
+		assertEquals(oldX2 + 2, r.getX2());
+		assertEquals(oldY2 + 3, r.getY2());
+	}
+
 }
