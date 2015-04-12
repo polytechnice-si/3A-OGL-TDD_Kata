@@ -1,6 +1,7 @@
 package fr.unice.polytech.ogl.tdd;
 
 
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -8,15 +9,18 @@ public class HotDrawTest {
 
 	private Canvas c;
 
+	@Before
+	public void initialize() {
+		c = new Canvas();
+	}
+
 	@Test
 	public void testEmptyCanvas() {
-		c = new Canvas();
 		assertEquals(0, c.getNumberOfElements());
 	}
 
 	@Test
 	public void testCanvas() {
-		c = new Canvas();
 		c.add(new Circle(10, 20, 5));    // Circle located at (10,20), with radius 5.
 		assertEquals(1, c.getNumberOfElements());
 
