@@ -121,4 +121,20 @@ public class HotDrawTest {
 		assertEquals(2*oldHeight, aRectangle.height());
 
 	}
+
+	@Test
+	public void testApplyOperationOnWidget(){
+		Operation o = new Scaling(2);
+
+		int oldRadius = aCircle.radius();
+		o.processCircle(aCircle);
+		assertEquals(2*oldRadius, aCircle.radius());
+
+		int oldWidth = aRectangle.width();
+		int oldHeight = aRectangle.height();
+		o.processRectangle(aRectangle);
+		assertEquals(2 * oldWidth, aRectangle.width());
+		assertEquals(2*oldHeight, aRectangle.height());
+	}
+
 }
