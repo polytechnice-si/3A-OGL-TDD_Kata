@@ -11,15 +11,7 @@ public class Group {
 
 	public int getNumberOfElements() { return elements.size(); }
 
-	public void translate(int deltaX, int deltaY) {
-		Operation o = new Translation(deltaX, deltaY);
-		for(Widget w: elements) {
-			w.apply(o);
-		}
-	}
-
-	public void scale(int factor) {
-		Operation o = new Scaling(factor);
+	public void apply(Operation o) {
 		for(Widget w: elements) {
 			w.apply(o);
 		}

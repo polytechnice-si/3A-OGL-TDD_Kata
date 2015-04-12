@@ -77,7 +77,8 @@ public class HotDrawTest {
 
 		emptyCanvas.add(aCircle);
 		emptyCanvas.add(aRectangle);
-		emptyCanvas.translate(2, 3);
+		Operation o = new Translation(2, 3);
+		emptyCanvas.apply(o);
 
 		assertEquals(cOldX + 2, aCircle.getX());
 		assertEquals(cOldY + 3, aCircle.getY());

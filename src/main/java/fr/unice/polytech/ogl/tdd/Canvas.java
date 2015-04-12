@@ -12,8 +12,8 @@ public class Canvas {
 		group.add(o);
 	}
 
-	public void translate(int deltaX, int deltaY) {
-		group.translate(deltaX, deltaY);
+	public void apply(Operation o) {
+		group.apply(o);
 	}
 
 }
