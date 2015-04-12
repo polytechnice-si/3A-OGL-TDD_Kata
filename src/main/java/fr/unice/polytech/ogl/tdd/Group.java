@@ -11,5 +11,6 @@ public class Group {
 
 	public int getNumberOfElements() { return elements.size(); }
 
+	public void translate(int deltaX, int deltaY) {	}
 
 }

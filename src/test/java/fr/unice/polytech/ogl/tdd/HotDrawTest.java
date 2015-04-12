@@ -89,4 +89,13 @@ public class HotDrawTest {
 		assertEquals(2, g.getNumberOfElements());
 	}
 
+	@Test
+	public void translatingGroup() {
+		Group g = new Group();
+		g.add(new Circle());
+		g.add(new Rectangle(5, 6, 10, 8));
+		g.translate(2,3);
+		// will be tricky to write ...
+	}
+
 }
