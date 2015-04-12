@@ -1,7 +1,7 @@
 package fr.unice.polytech.ogl.tdd;
 
 
-public class Circle {
+public class Circle implements Widget {
 
 	private int x, y;
 
@@ -15,6 +15,7 @@ public class Circle {
 	public int getX() { return x; }
 	public int getY() { return y; }
 
+	@Override
 	public void translate(int deltaX, int deltaY) {
 		this.x = x + deltaX;
 		this.y = y + deltaY;

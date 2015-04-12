@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Canvas {
 
-	private List<Object> elements = new ArrayList<>();
+	private List<Widget> elements = new ArrayList<>();
 
 	public int getNumberOfElements() {
 		return elements.size();
 	}
 
-	public void add(Object o) {
+	public void add(Widget o) {
 		elements.add(o);
 	}
 

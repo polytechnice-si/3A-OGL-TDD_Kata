@@ -1,7 +1,7 @@
 package fr.unice.polytech.ogl.tdd;
 
 
-public class Rectangle {
+public class Rectangle implements Widget {
 
 	private int x1, y1, x2, y2;
 
@@ -15,6 +15,7 @@ public class Rectangle {
 	public int getX2() { return x2;	}
 	public int getY2() { return y2; }
 
+	@Override
 	public void translate(int deltaX, int deltaY) {
 		this.x1 = x1 + deltaX; this.y1 = y1 + deltaY;
 		this.x2 = x2 + deltaX; this.y2 = y2 + deltaY;
