@@ -1,25 +1,19 @@
 package fr.unice.polytech.ogl.tdd;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Canvas {
 
-	private List<Widget> elements = new ArrayList<>();
+	private Group group = new Group();
 
 	public int getNumberOfElements() {
-		return elements.size();
+		return group.getNumberOfElements();
 	}
 
 	public void add(Widget o) {
-		elements.add(o);
+		group.add(o);
 	}
 
 	public void translate(int deltaX, int deltaY) {
-		for(Widget w: elements) {
-			w.translate(deltaX, deltaY);
-		}
+		group.translate(deltaX, deltaY);
 	}
 
 }
