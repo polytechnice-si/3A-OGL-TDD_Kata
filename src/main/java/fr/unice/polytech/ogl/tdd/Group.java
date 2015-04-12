@@ -18,8 +18,9 @@ public class Group {
 	}
 
 	public void scale(int factor) {
+		Operation o = new Scaling(factor);
 		for(Widget w: elements) {
-			w.scale(factor);
+			w.apply(o);
 		}
 	}
 

@@ -30,11 +30,5 @@ public class Rectangle implements Widget {
 	}
 
 	@Override
-	public void scale(int factor) {
-		this.x1 = x1 * factor; this.x2 = x2 * factor;
-		this.y1 = y1 * factor; this.y2 = y2 * factor;
-	}
-
-	@Override
 	public void apply(Operation o) { o.processRectangle(this); }
 }
