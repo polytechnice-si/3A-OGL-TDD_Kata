@@ -85,7 +85,7 @@ public class HotDrawTest {
 		assertEquals(0, g.getNumberOfElements());
 
 		g.add(new Circle());
-		g.add(new Rectangle((5, 6, 10, 8));
+		g.add(new Rectangle(5, 6, 10, 8));
 		assertEquals(2, g.getNumberOfElements());
 	}
 
