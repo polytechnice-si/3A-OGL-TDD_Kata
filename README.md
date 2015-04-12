@@ -255,5 +255,8 @@ To retrieve the code obtained at the end of this step: ``git checkout step9``
 
 To retrieve the code obtained at the end of this step: ``git checkout step10``
 
+## Final result 
+
+![Class diagram](https://raw.githubusercontent.com/polytechnice-si/3A-OGL-TDD_Kata/complete/classdiagram.png)
 
 
