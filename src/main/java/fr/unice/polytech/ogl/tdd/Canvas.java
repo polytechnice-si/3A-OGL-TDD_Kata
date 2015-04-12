@@ -1,14 +1,19 @@
 package fr.unice.polytech.ogl.tdd;
 
-/**
- * This file is part of the tdd-kata project
- *
- * @author mosser (12/04/2015, 13:54)
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Canvas {
 
+	private List<Object> elements = new ArrayList<>();
+
 	public int getNumberOfElements() {
-		return 0;
+		return elements.size();
+	}
+
+	public void add(Object o) {
+		elements.add(o);
 	}
 
 }
