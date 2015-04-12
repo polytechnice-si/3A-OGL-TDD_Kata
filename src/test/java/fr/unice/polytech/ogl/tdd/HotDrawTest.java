@@ -143,7 +143,24 @@ public class HotDrawTest {
 		scaling.processRectangle(aRectangle);
 
 		assertEquals(2 * oldWidth, aRectangle.width());
-		assertEquals(2*oldHeight, aRectangle.height());
+		assertEquals(2 * oldHeight, aRectangle.height());
+	}
+
+	@Test
+	public void recursiveGroup() {
+
+		emptyGroup.add(group);
+		assertEquals(1, emptyGroup.getNumberOfElements());
+
+		int oldRadius = aCircle.radius();
+		int oldWidth = aRectangle.width();
+		int oldHeight = aRectangle.height();
+
+		emptyGroup.apply(scaling);
+
+		assertEquals(2 * oldRadius, aCircle.radius());
+		assertEquals(2 * oldWidth,  aRectangle.width());
+		assertEquals(2 * oldHeight, aRectangle.height());
 	}
 
 }
