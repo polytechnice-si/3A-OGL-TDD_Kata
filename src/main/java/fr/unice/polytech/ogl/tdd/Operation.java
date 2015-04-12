@@ -1,11 +1,15 @@
 package fr.unice.polytech.ogl.tdd;
 
 
-public interface Operation {
+public abstract class Operation {
 
-	public void processCircle(Circle c);
+	public abstract void processCircle(Circle c);
 
-	public void processRectangle(Rectangle r);
+	public abstract void processRectangle(Rectangle r);
 
-	public void processGroup(Group g);
+	public final void processGroup(Group g) {
+		for(Widget w: g.getElements()) {
+			w.apply(this);
+		}
+	}
 }

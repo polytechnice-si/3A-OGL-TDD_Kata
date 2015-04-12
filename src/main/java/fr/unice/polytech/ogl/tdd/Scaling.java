@@ -1,7 +1,7 @@
 package fr.unice.polytech.ogl.tdd;
 
 
-public class Scaling implements Operation {
+public class Scaling extends Operation {
 
 	private int factor;
 
@@ -22,10 +22,4 @@ public class Scaling implements Operation {
 		r.setY2(r.getY2() * factor);
 	}
 
-	@Override
-	public void processGroup(Group g) {
-		for(Widget w: g.getElements()) {
-			w.apply(this);
-		}
-	}
 }

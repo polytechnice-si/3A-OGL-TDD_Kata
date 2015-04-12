@@ -1,7 +1,7 @@
 package fr.unice.polytech.ogl.tdd;
 
 
-public class Translation implements Operation {
+public class Translation extends Operation {
 
 	private int deltaX;
 	private int deltaY;
@@ -25,10 +25,4 @@ public class Translation implements Operation {
 		r.setY2(r.getY2() + deltaY);
 	}
 
-	@Override
-	public void processGroup(Group g) {
-		for(Widget w: g.getElements()) {
-			w.apply(this);
-		}
-	}
 }
