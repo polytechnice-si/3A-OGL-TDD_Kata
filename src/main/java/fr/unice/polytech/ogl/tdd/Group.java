@@ -3,7 +3,7 @@ package fr.unice.polytech.ogl.tdd;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
+public class Group implements Widget {
 
 	private List<Widget> elements = new ArrayList<>();
 
@@ -11,10 +11,9 @@ public class Group {
 
 	public int getNumberOfElements() { return elements.size(); }
 
-	public void apply(Operation o) {
-		for(Widget w: elements) {
-			w.apply(o);
-		}
-	}
+	public List<Widget> getElements() { return this.elements; }
+
+	@Override
+	public void apply(Operation o) { o.processGroup(this);	}
 
 }

@@ -21,4 +21,11 @@ public class Scaling implements Operation {
 		r.setY1(r.getY1() * factor);
 		r.setY2(r.getY2() * factor);
 	}
+
+	@Override
+	public void processGroup(Group g) {
+		for(Widget w: g.getElements()) {
+			w.apply(this);
+		}
+	}
 }

@@ -24,4 +24,11 @@ public class Translation implements Operation {
 		r.setY1(r.getY1() + deltaY);
 		r.setY2(r.getY2() + deltaY);
 	}
+
+	@Override
+	public void processGroup(Group g) {
+		for(Widget w: g.getElements()) {
+			w.apply(this);
+		}
+	}
 }

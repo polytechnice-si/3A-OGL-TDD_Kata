@@ -7,4 +7,5 @@ public interface Operation {
 
 	public void processRectangle(Rectangle r);
 
+	public void processGroup(Group g);
 }
