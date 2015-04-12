@@ -5,12 +5,16 @@ import java.util.List;
 
 public class Group {
 
-	private List<Object> elements = new ArrayList<>();
+	private List<Widget> elements = new ArrayList<>();
 
-	public void add(Object o) { elements.add(o); }
+	public void add(Widget o) { elements.add(o); }
 
 	public int getNumberOfElements() { return elements.size(); }
 
-	public void translate(int deltaX, int deltaY) {	}
+	public void translate(int deltaX, int deltaY) {
+		for(Widget w: elements) {
+			w.translate(deltaX, deltaY);
+		}
+	}
 
 }
