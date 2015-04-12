@@ -108,4 +108,17 @@ public class HotDrawTest {
 		assertEquals(rOldY2 + 3, aRectangle.getY2());
 	}
 
+	@Test
+	public void testScaling(){
+		int oldRadius = aCircle.radius();
+		int oldWidth = aRectangle.width();
+		int oldHeight = aRectangle.height();
+
+		group.scale(2);
+
+		assertEquals(2*oldRadius, aCircle.radius());
+		assertEquals(2*oldWidth, aRectangle.width());
+		assertEquals(2*oldHeight, aRectangle.height());
+
+	}
 }
