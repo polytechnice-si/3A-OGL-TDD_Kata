@@ -16,6 +16,10 @@ public class Canvas {
 		elements.add(o);
 	}
 
-	public void translate(int deltaX, int deltaY) { }
+	public void translate(int deltaX, int deltaY) {
+		for(Widget w: elements) {
+			w.translate(deltaX, deltaY);
+		}
+	}
 
 }
