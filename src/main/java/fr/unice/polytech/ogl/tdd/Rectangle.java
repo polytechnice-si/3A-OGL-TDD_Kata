@@ -15,6 +15,9 @@ public class Rectangle {
 	public int getX2() { return x2;	}
 	public int getY2() { return y2; }
 
-	public void translate(int deltaX, int deltaY) {	}
+	public void translate(int deltaX, int deltaY) {
+		this.x1 = x1 + deltaX; this.y1 = y1 + deltaY;
+		this.x2 = x2 + deltaX; this.y2 = y2 + deltaY;
+	}
 
 }
