@@ -55,4 +55,28 @@ public class HotDrawTest {
 		assertEquals(oldY2 + 3, r.getY2());
 	}
 
+	@Test
+	public void translatingCanvas() {
+		Circle c = new Circle();
+		int cOldX = c.getX();
+		int cOldY = c.getY();
+
+		Rectangle r = new Rectangle(5, 6, 10, 8);
+		int rOldX1 = r.getX1();
+		int rOldY1 = r.getY1();
+		int rOldX2 = r.getX2();
+		int rOldY2 = r.getY2();
+
+		emptyCanvas.add(c);
+		emptyCanvas.add(r);
+		emptyCanvas.translate(2, 3);
+
+		assertEquals(cOldX + 2, c.getX());
+		assertEquals(cOldY + 3, c.getY());
+		assertEquals(rOldX1 + 2, r.getX1());
+		assertEquals(rOldY1 + 3, r.getY1());
+		assertEquals(rOldX2 + 2, r.getX2());
+		assertEquals(rOldY2 + 3, r.getY2());
+	}
+
 }
